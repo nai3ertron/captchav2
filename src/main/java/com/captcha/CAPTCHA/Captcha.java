@@ -4,17 +4,15 @@ import java.util.List;
 
 public class Captcha {
 
-    private String[] patternArray={"1","2"};
-    private String[] number={"1","2","3","4","5","6","7","8","9"};
-    private String[] operatorArray={"+","-","*","/"};
-    private String[] leftArrayOperand = {"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
+    private String[] patternArray = {"1", "2"};
+    private String[] rightArrayOperand = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+    private String[] operatorArray = {"+", "-", "*", "/"};
+    private String[] leftArrayOperand = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 
     private int pattern;
     private int leftOperand;
     private int operater;
     private int rightOperand;
-
-
 
     public Captcha(int pattern, int leftOperand, int operater, int rightOperand) {
         this.pattern = pattern;
@@ -54,6 +52,7 @@ public class Captcha {
     public void setRightOperand(int rightOperand) {
         this.rightOperand = rightOperand;
     }
+
     @Override
     public String toString() {
         if(this.leftOperand==1) {
@@ -67,6 +66,8 @@ public class Captcha {
     public String getLeft() {
         return  this.leftArrayOperand[this.leftOperand];
     }
+
+
 }
 
 
