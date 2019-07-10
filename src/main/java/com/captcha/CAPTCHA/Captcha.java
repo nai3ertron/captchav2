@@ -6,7 +6,7 @@ public class Captcha {
 
     private String[] patternArray = {"1", "2"};
     private String[] rightArrayOperand = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
-    private String[] operatorArray = {"+", "-", "*", "/"};
+    private String[] operatorArray = {".", "+", "-", "*", "/"};
     private String[] leftArrayOperand = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 
     private int pattern;
@@ -55,32 +55,34 @@ public class Captcha {
 
     @Override
     public String toString() {
-        if(this.leftOperand==1) {
-            return "One + 1";
-        }else if(this.leftOperand==9){
-            return "Nine + 1";
-        }
-        return "";
+        String word = "";
+
+        word = this.getLeft() + " " + this.getOperator() + " " + this.getRight();
+
+        return word;
     }
 
     public String getRight() {
-        if(this.pattern==1){
-            return  this.rightArrayOperand[this.rightOperand];
-        }else{
+        if (this.pattern == 1) {
+            return this.rightArrayOperand[this.rightOperand];
+        } else {
             return this.leftArrayOperand[this.leftOperand];
         }
 
     }
 
     public String getLeft() {
-        if(this.pattern==1){
-            return  this.leftArrayOperand[this.leftOperand];
-        }else{
+        if (this.pattern == 1) {
+            return this.leftArrayOperand[this.leftOperand];
+        } else {
             return this.rightArrayOperand[this.leftOperand];
         }
 
     }
 
+    public String getOperator() {
+        return this.operatorArray[this.operater];
+    }
 
 
 }

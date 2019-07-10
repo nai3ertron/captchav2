@@ -47,4 +47,10 @@ public class captchaTestV1 {
         Assert.assertEquals("One",captcha.getRight());
     }
 
+    @Test
+    public void patternOneShouldReturnOperator(){
+        Captcha captcha = new Captcha(2,1,2,1);
+        Assert.assertEquals("-",captcha.getOperator());
+    }
+
 }
