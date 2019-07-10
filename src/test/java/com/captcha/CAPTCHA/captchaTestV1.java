@@ -12,8 +12,9 @@ public class captchaTestV1 {
     }
 
     @Test
-    private void patternOneShould() {
-
+    public void patternOneShouldReturnNinePlus1() {
+        Captcha captcha = new Captcha(1,9,1,1);
+        Assert.assertEquals("Nine + 1",captcha.toString());
     }
 
 }

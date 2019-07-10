@@ -14,12 +14,7 @@ public class Captcha {
     private int operater;
     private int rightOperand;
 
-    @Override
-    public String toString() {
-        if(pattern==1)
-            return "One + 1";
-        return "";
-    }
+
 
     public Captcha(int pattern, int leftOperand, int operater, int rightOperand) {
         this.pattern = pattern;
@@ -58,6 +53,15 @@ public class Captcha {
 
     public void setRightOperand(int rightOperand) {
         this.rightOperand = rightOperand;
+    }
+    @Override
+    public String toString() {
+        if(this.leftOperand==1) {
+            return "One + 1";
+        }else if(this.leftOperand==9){
+            return "Nine + 1";
+        }
+        return "";
     }
 }
 
