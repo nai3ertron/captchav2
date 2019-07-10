@@ -29,4 +29,10 @@ public class captchaTestV1 {
         Assert.assertEquals("Nine",captcha.getLeft());
     }
 
+    @Test
+    public  void patternTwoShouldReturnResult1(){
+        Captcha captcha = new Captcha(2,1,1,1);
+        Assert.assertEquals("1",captcha.getLeft());
+    }
+
 }

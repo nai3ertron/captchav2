@@ -64,8 +64,14 @@ public class Captcha {
     }
 
     public String getLeft() {
-        return  this.leftArrayOperand[this.leftOperand];
+        if(this.pattern==1){
+            return  this.leftArrayOperand[this.leftOperand];
+        }else{
+            return this.rightArrayOperand[this.leftOperand];
+        }
+
     }
+
 
 
 }
