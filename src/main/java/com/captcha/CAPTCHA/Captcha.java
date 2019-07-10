@@ -6,7 +6,7 @@ public class Captcha {
 
     private String[] patternArray = {"1", "2"};
     private String[] rightArrayOperand = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
-    private String[] operatorArray = {".", "+", "-", "*", "/"};
+    private String[] operatorArray = {"+", "-", "*", "/"};
     private String[] leftArrayOperand = {"Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"};
 
     private int pattern;
@@ -81,7 +81,7 @@ public class Captcha {
     }
 
     public String getOperator() {
-        return this.operatorArray[this.operater];
+        return this.operatorArray[this.operater-1];
     }
 
 
