@@ -63,6 +63,15 @@ public class Captcha {
         return "";
     }
 
+    public String getRight() {
+        if(this.pattern==1){
+            return  this.rightArrayOperand[this.rightOperand];
+        }else{
+            return this.leftArrayOperand[this.leftOperand];
+        }
+
+    }
+
     public String getLeft() {
         if(this.pattern==1){
             return  this.leftArrayOperand[this.leftOperand];
