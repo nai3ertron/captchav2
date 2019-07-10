@@ -17,4 +17,16 @@ public class captchaTestV1 {
         Assert.assertEquals("Nine + 1",captcha.toString());
     }
 
+    @Test
+    public  void  patternOneShouldReturnResultLeftOperand(){
+        Captcha captcha = new Captcha(1,1,1,1);
+        Assert.assertEquals("One",captcha.getLeft());
+    }
+
+    @Test
+    public void patternOneShouldReturnResultNine() {
+        Captcha captcha = new Captcha(1,9,1,1);
+        Assert.assertEquals("Nine",captcha.getLeft());
+    }
+
 }

@@ -7,7 +7,7 @@ public class Captcha {
     private String[] patternArray={"1","2"};
     private String[] number={"1","2","3","4","5","6","7","8","9"};
     private String[] operatorArray={"+","-","*","/"};
-    private String[] number1={"1","2","3","4","5","6","7","8","9"};
+    private String[] leftArrayOperand = {"Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"};
 
     private int pattern;
     private int leftOperand;
@@ -18,9 +18,9 @@ public class Captcha {
 
     public Captcha(int pattern, int leftOperand, int operater, int rightOperand) {
         this.pattern = pattern;
-        this.leftOperand = leftOperand;
-        this.operater = operater;
         this.rightOperand = rightOperand;
+        this.operater = operater;
+        this.leftOperand = leftOperand;
     }
 
     public int getPattern() {
@@ -62,6 +62,10 @@ public class Captcha {
             return "Nine + 1";
         }
         return "";
+    }
+
+    public String getLeft() {
+        return  this.leftArrayOperand[this.leftOperand];
     }
 }
 
